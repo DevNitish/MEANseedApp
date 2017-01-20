@@ -1,0 +1,30 @@
+{
+  "name": "meanseed",
+  "version": "1.0.0",
+  "description": "the seed project for MEAN stack development",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevNitish/MEANseedApp.git"
+  },
+  "author": "Nitish Kumar",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "express-session": "^1.14.1",
+    "mongoose": "^4.6.0",
+    "path": "^0.12.7",
+    "serve-favicon": "^2.3.2",
+    "static-favicon": "^2.0.0-alpha"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevNitish/MEANseedApp/issues"
+  },
+  "homepage": "https://github.com/DevNitish/MEANseedApp#readme"
+}
