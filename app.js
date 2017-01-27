@@ -1,3 +1,4 @@
+//Starting point of the app
 var express =require('express');
 var app =express();
 var path =require('path');
@@ -30,16 +31,16 @@ app.use(function(req, res, next) {
 
 
 //Use the requires
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(bodyParser.json());
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico'))); //for website icon
+app.use(bodyParser.json());//Read and parse the data sent from HTML form
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use('/', mainRoute);
-app.set('views', path.join(__dirname, 'public'));
+app.use('/', mainRoute);// use this file for all your API calls
+//app.set('views', path.join(__dirname, 'public'));
 app.engine('html', require('ejs').renderFile);
- app.set('view engine', 'html');
+app.set('view engine', 'html');
 
-
+//To set the view for client site
 app.use(express.static(path.join(__dirname, 'public')));
 
 

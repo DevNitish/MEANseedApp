@@ -1,3 +1,6 @@
+/* *This file is for data modeling.
+Use this file for functions that need DB query 
+ */
 var mongoose=require('mongoose');
 var userSchema=new mongoose.Schema(
 {

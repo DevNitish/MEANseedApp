@@ -1,3 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<h1>The main Header</h1>
-<a href="/indexBootstrap.html">Click here for Bootstrap v4 page</a>
+<head>
+  <title>Seed App</title>
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+    crossorigin="anonymous">
+    <!--custom css file-->
+    <link rel="stylesheet" href="./includes/css/style.css">
+    <!--bootstrap css and js file-->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+      crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+          crossorigin="anonymous"></script>
+          <!--Angular js files-->
+          <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+          <script src="//code.angularjs.org/snapshot/angular-animate.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="mainCtrl" ng-cloak>
+  <!--start you angular app here-->
+  <!--
+    Your HTML content here
+
+    
+  -->
+  <div class="card" style="width: 20rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">{{mytext}}</h4>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="/indexAngularMaterial.html" class="btn btn-primary">Angular Material</a>
+    </div>
+  </div>
+
+
+
+  <!--all custom javascript files here-->
+  <script src="./app.public.js"></script>
+</body>
+
+</html>

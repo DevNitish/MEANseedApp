@@ -1,3 +1,4 @@
+//starting point of the node app
 const app=require('../app');
 const server=require('http').createServer(app);
 //const ioConfig=require('../io/io.main.js');
