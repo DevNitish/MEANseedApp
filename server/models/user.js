@@ -8,18 +8,25 @@ var userSchema=new mongoose.Schema(
 	password:String
 });
 
-userSchema.statics.findAll=function(callback)
+userSchema.statics.findAllUser=function(callback)
 {
 	this.find({
 
 	},function(err,data)
-	{
-		console.log("data-----",data);
+	{		if(!err){
+				callback(null,data);
+				console.log("data-----",data);
+			}
+			else{
+				console.log("data err-----",err);
+				callback(err,null);
+			}
+				
 	})
 }
 
 userSchema.statics.saveUser=function(userDetails, callback)
-{		console.log("user userDetails=====>",userDetails)
+{		
 	this.create({
 		email:userDetails.email,
         name:userDetails.name,

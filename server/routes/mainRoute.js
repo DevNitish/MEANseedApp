@@ -17,12 +17,25 @@ router.post('/saveUser', function(req, res,next) {
         
     } else {
       console.log("Error");
-        res.send("none");
-      //res.status(500).send('Internal error occurred--500');
+       
+      res.status(500).send('Internal error occurred--500');
     }
   });
+});
 
+router.get('/getUser', function(req, res){
+        USER.findAllUser( function(err, result) {
+    if (result) {
+            console.log("Inserted",result);
 
+      res.send(result);
+        
+    } else {
+      console.log("Error");
+       
+      res.status(500).send('Internal error occurred--500');
+    }
+  });
 });
 
 module.exports = router;
