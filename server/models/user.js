@@ -3,9 +3,9 @@ Use this file for functions that need DB query
  */
 var mongoose=require('mongoose');
 var userSchema=new mongoose.Schema(
-{
+{	name:String,
 	email:{type:String,unique:true},
-	name:String,
+	password:String
 });
 
 userSchema.statics.findAll=function(callback)
@@ -18,12 +18,12 @@ userSchema.statics.findAll=function(callback)
 	})
 }
 
-
-userSchema.statics.insertOne=function(userDetails, callback)
-{
+userSchema.statics.saveUser=function(userDetails, callback)
+{		console.log("user userDetails=====>",userDetails)
 	this.create({
-		email:'abc@xyz.com',
-        name:"Your Name"
+		email:userDetails.email,
+        name:userDetails.name,
+		password:userDetails.password
     
 	},function(err,result)
 	{
@@ -35,13 +35,9 @@ userSchema.statics.insertOne=function(userDetails, callback)
             console.log('Data Error');
 
             callback(err, null);
-        }
-
-            
+        }            
 	});
-     console.log('Data Error 2');
-
-            callback(err, null);
+     
 }
 
 

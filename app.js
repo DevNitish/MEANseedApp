@@ -36,7 +36,8 @@ app.use(bodyParser.json());//Read and parse the data sent from HTML form
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/', mainRoute);// use this file for all your API calls
-//app.set('views', path.join(__dirname, 'public'));
+//This is for view handle bar
+app.set('views', path.join(__dirname, 'public'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
@@ -56,7 +57,5 @@ if (app.get('env') === 'development') {
     });
   });
 }
-
-//app.listen(4000);
 
 module.exports = app;

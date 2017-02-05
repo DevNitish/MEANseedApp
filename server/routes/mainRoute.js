@@ -6,18 +6,23 @@ var path =require('path');
 router =express.Router();
 
 // this is a basic route to insert a data (user) in DB
-router.post('/insertOne', function(req, res) {
-    console.log("here");
-  USER.insertOne({}, function(err, result) {
-    if (err) {
-        console.log("Error");
-      res.staus(500).send('Internal error occurred');
-    } else {
-      console.log("Inserted",result);
+router.post('/saveUser', function(req, res,next) {
+    console.log("here",req.body);
+
+  USER.saveUser(req.body, function(err, result) {
+    if (result) {
+            console.log("Inserted",result);
 
       res.send(result);
+        
+    } else {
+      console.log("Error");
+        res.send("none");
+      //res.status(500).send('Internal error occurred--500');
     }
   });
+
+
 });
 
 module.exports = router;
