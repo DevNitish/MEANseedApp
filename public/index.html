@@ -5,24 +5,23 @@
   <title>Seed App</title>
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+  <link rel="stylesheet" href="./includes/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="./includes/font-awesome-4.7.0/css/font-awesome.min.css">
 
     <!--custom css file-->
     <link rel="stylesheet" href="./includes/css/style.css">
     <!--bootstrap css and js file-->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+    <script src="./includes/js/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
     crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+    <script src="./includes/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
         crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+    <script src="./includes/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
           crossorigin="anonymous"></script>
-    <script src="https://use.fontawesome.com/fe4a02cae5.js"></script>
+    <script src="./includes/js/fe4a02cae5.js"></script>
 
           <!--Angular js files-->
-          <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
-          <script src="//code.angularjs.org/snapshot/angular-animate.js"></script>
+          <script src="./includes/js//angular.min.js"></script>
+          <script src="./includes/js//angular-animate.js"></script>
 </head>
 
 <body ng-app="myApp" ng-controller="mainCtrl" ng-cloak>
@@ -38,7 +37,7 @@
   <p>The data will be saved into the MongoDB.</p>
 </div>
  <div class="row">
-    <div class="col-md-6 ">
+    <div class="col-md-6  ">
       <form ng-submit="saveUser()">
           <div class="form-group">
           <label for="name">Name</label>
@@ -56,8 +55,10 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
+    
     <div class="col-md-6">
-      <button class="btn btn-primary" ng-click="getUser()">Refresh Users</button>
+      <p><small>Use this button to Refresh Users Data</small></p>
+      <button class="btn btn-primary" ng-click="getUser()">Refresh</button>
       <br>
       <br>
       <div class="list-group">
