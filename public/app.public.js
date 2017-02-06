@@ -21,13 +21,42 @@ $scope.getUser=function(){
 }
 $scope.saveUser=function(){
     console.log(" the user is ",$scope.user);
+    if($scope.user._id){ //if user is present then edit the info
+            $http.post('/editUser',$scope.user).then(function successCallback(response) {
+            // this callback will be called asynchronously
+            // when the response is available
+            $scope.user={//reset the value of $scope after saveing
+                name:'',
+                email:'',
+                password:''
+            };
+            $scope.getUser();
+        });
+    } else { // create a user if user is not there
     $http.post('/saveUser',$scope.user).then(function successCallback(response) {
             // this callback will be called asynchronously
             // when the response is available
-            console.log("added",response);
+            $scope.user={//reset the value of $scope after saveing
+                name:'',
+                email:'',
+                password:''
+            };
+            $scope.getUser();
+        });
+    }
+}
+
+$scope.editUser=function(user){
+    $scope.user=user;
+}
+$scope.deleteUser=function(user){
+        console.log("delete the user",user._id);
+        $http.post('/deleteUser',user).then(function successCallback(response) {
+            // this callback will be called asynchronously
+            // when the response is available
+            console.log("deleted",response);
             $scope.getUser();
         });
 }
-
 
 }]);

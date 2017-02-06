@@ -7,15 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
     crossorigin="anonymous">
+  <link rel="stylesheet" href="./includes/font-awesome-4.7.0/css/font-awesome.min.css">
+
     <!--custom css file-->
     <link rel="stylesheet" href="./includes/css/style.css">
     <!--bootstrap css and js file-->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-      crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
         crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
           crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/fe4a02cae5.js"></script>
+
           <!--Angular js files-->
           <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
           <script src="//code.angularjs.org/snapshot/angular-animate.js"></script>
@@ -53,15 +57,25 @@
       </form>
     </div>
     <div class="col-md-6">
-      <button class="btn btn-primary" ng-click="getUser()">Refresh</button>
+      <button class="btn btn-primary" ng-click="getUser()">Refresh Users</button>
+      <br>
       <br>
       <div class="list-group">
-        <a href="#" ng-repeat="u in users" class="list-group-item list-group-item-action flex-column align-items-start">
+
+        <div ng-repeat="u in users"  ng-mouseenter="options=true" ng-mouseleave="options=false" class="list-group-item list-group-item-action flex-column align-items-start">
+         <span ng-click="editUser(u)">
+         <i style=" position: absolute; top: 20; right:35px"class="fa fa-edit" ng-show="options " aria-hidden="true"></i>
+         </span>
+         <span ng-click="deleteUser(u)">
+         <i style=" position: absolute; top: 20; right:10px"class="fa fa-trash" ng-show="options " aria-hidden="true"></i>
+         </span>
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{u.name}}</h5>
           </div>
           <p class="mb-1">{{u.email}}</p>
-        </a>
+
+        </div>        
+         </div>
       </div>
     </div>
   </div>
