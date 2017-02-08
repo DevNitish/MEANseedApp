@@ -1,6 +1,6 @@
 # MEANseedApp
 Seed app for mean stack development. The Seed app contains basic code start building your node application.
-
+[Demo Here](http://mean-seedapp.herokuapp.com/)
 ### Prerequisites 
 Make sure you have installed following apps
 * NodeJs version 6.X.X
